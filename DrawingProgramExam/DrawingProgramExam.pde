@@ -6,7 +6,8 @@ boolean draw;
 void setup() {
   fullScreen();
   population();
-  
+  quitButtonSetup();
+  quitButtonDraw();
 
 
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -20,6 +21,7 @@ void draw() {
 }//
 
 void mousePressed() {
+  quitButtonMousePressed();
   if ( mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) 
   {
     if (draw == false) 
