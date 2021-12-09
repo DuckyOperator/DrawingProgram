@@ -1,13 +1,12 @@
 
-float buttonX1, buttonY1, buttonWidth1, buttonHeight1;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
-boolean draw;
+boolean draw=false;
 
 void setup() {
   fullScreen();
   population();
   quitButtonSetup();
-  quitButtonDraw();
+  textSetup();
 
 
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -21,7 +20,9 @@ void draw() {
 }//
 
 void mousePressed() {
+  
   quitButtonMousePressed();
+  
   if ( mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) 
   {
     if (draw == false) 
