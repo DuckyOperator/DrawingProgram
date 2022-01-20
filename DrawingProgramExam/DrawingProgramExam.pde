@@ -1,6 +1,6 @@
 
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
-boolean draw=false;
+boolean draw=true;
 
 void setup() {
   fullScreen();
